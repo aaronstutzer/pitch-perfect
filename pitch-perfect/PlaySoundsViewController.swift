@@ -60,10 +60,5 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
         setupAudio()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configureUI(.notPlaying)
-    }
 
 }
