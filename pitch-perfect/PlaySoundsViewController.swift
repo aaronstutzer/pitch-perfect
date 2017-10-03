@@ -65,6 +65,7 @@ class PlaySoundsViewController: UIViewController {
         lowPitchButton.imageView?.contentMode = .scaleAspectFit
         echoButton.imageView?.contentMode = .scaleAspectFit
         reverbButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.isEnabled = false
     }
 
 }

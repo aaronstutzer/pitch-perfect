@@ -56,12 +56,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
+
+    let alert = UIAlertController(title: "Recording Alert", message: "recording was not successfull!", preferredStyle: .alert)
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
-            print("recording was not successful")
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
